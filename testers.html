@@ -496,6 +496,203 @@
       </article>
     </section>
 
+    <!-- Leveling -->
+    <section class="test-category">
+      <h2>Leveling &amp; Leaderboards</h2>
+      <article class="test-card">
+        <h3>/rank</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> Send a few messages, then <code>/rank</code></p>
+          <p><span class="test-label expected">Expected</span> An embed with your level, server rank, total XP, and a progress bar to the next level.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/leaderboard</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/leaderboard type:level</code></p>
+          <p><span class="test-label expected">Expected</span> Top 10 by level. Without <code>type</code>, it ranks by Rokda balance instead.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Image & Meme Tools -->
+    <section class="test-category">
+      <h2>Image &amp; Meme Tools</h2>
+      <p class="testers-intro">These were previously broken and are now fixed — please confirm each actually returns an image.</p>
+      <article class="test-card">
+        <h3>/action</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/action type:hug user:@someone</code>, then a solo one like <code>/action type:dance</code></p>
+          <p><span class="test-label expected">Expected</span> An anime reaction GIF with a caption. Solo reactions ignore the target.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/deepfry, /pixelate, /wasted, /jail, /glitch, /caption, /ship-card, /wanted, /pfp-card, /achievement, /ascii</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> Run each on yourself or another member.</p>
+          <p><span class="test-label expected">Expected</span> A rendered image (or ASCII text for <code>/ascii</code>). No "invalid size" errors — that bug is fixed.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Community & Engagement -->
+    <section class="test-category">
+      <h2>Community &amp; Engagement</h2>
+      <article class="test-card">
+        <h3>/reactionrole add</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/reactionrole add</code> with a message link, an emoji, and a role, then react on that message.</p>
+          <p><span class="test-label expected">Expected</span> The bot reacts to the message; reacting gives you the role, un-reacting removes it. Works on old messages too.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/welcome set &amp; /goodbye set</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> Set both channels, then have someone join/leave.</p>
+          <p><span class="test-label expected">Expected</span> A welcome / goodbye embed posts with the live member count. (Needs the Server Members Intent.)</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/autorole set</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/autorole set role:@Member</code>, then have someone join.</p>
+          <p><span class="test-label expected">Expected</span> New members get the role automatically. The role must sit below the bot's top role.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/poll &amp; /suggest</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/poll</code> with 2–4 options; <code>/suggest text:...</code></p>
+          <p><span class="test-label expected">Expected</span> Poll posts with numbered reactions; suggest posts with 👍/👎 pre-added.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/giveaway start</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/giveaway start duration:2m prize:Test</code>, react 🎉, wait ~2 min.</p>
+          <p><span class="test-label expected">Expected</span> After the timer, a winner is drawn from the reactors and announced.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/starboard set</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/starboard set channel:#starboard threshold:3</code>, then ⭐ a message 3 times.</p>
+          <p><span class="test-label expected">Expected</span> The message is reposted to the starboard with a live ⭐ count; drops off if it falls below the threshold.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/remind &amp; /reminders</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/remind when:2m text:test</code>, then <code>/reminders</code></p>
+          <p><span class="test-label expected">Expected</span> Confirms it's set and lists it; ~2 min later the bot pings you. Survives a bot restart.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/afk</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/afk reason:brb</code>, have someone mention you, then send a message yourself.</p>
+          <p><span class="test-label expected">Expected</span> The bot tells whoever pings you that you're AFK; your next message clears it.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/confess &amp; /confess-settings panel</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> Set the channel, run <code>/confess-settings panel</code>, click the button, submit; also try <code>/confess</code>.</p>
+          <p><span class="test-label expected">Expected</span> A numbered anonymous confession posts to the channel. Your side is private; the post never shows who sent it.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Games &amp; Systems -->
+    <section class="test-category">
+      <h2>More Games &amp; Systems</h2>
+      <article class="test-card">
+        <h3>/invest</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/invest market</code> → <code>/invest buy ticker:CHAI amount-in-rokda:500</code> → <code>/invest portfolio</code></p>
+          <p><span class="test-label expected">Expected</span> Market lists tickers; buying deducts Rokda and adds shares; portfolio shows value and P/L.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/meme</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/meme submit image:...</code>, then <code>/meme leaderboard</code></p>
+          <p><span class="test-label expected">Expected</span> The meme posts with a 🔥 seed reaction; the leaderboard shows vote counts and the prize pool.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/trivia start</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/trivia start</code>, react with the correct letter.</p>
+          <p><span class="test-label expected">Expected</span> A question with A/B/C/D; the first correct answer wins Rokda (faster = more).</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/focus</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/focus setroom</code>, join it, <code>/focus start minutes:25</code>, then leave.</p>
+          <p><span class="test-label expected">Expected</span> On leaving you're DM'd your payout (2 Rokda/min). <code>/focus leaderboard</code> shows totals.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/studybuddy, /birthday, /automod, /pulse</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/studybuddy join</code> (two accounts) → <code>/studybuddy match</code>; <code>/birthday set</code>; <code>/automod toggle</code>; <code>/pulse setchannel</code>.</p>
+          <p><span class="test-label expected">Expected</span> Match DMs both users; birthday saves; automod toggles; pulse channel is set (recap posts weekly).</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Social -->
+    <section class="test-category">
+      <h2>Social</h2>
+      <article class="test-card">
+        <h3>/marry, /divorce, /marriage</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/marry user:@someone</code>, have them click Accept; then <code>/marriage</code> and later <code>/divorce</code>.</p>
+          <p><span class="test-label expected">Expected</span> The proposee accepts/declines with a button. Married status shows a duration; <code>/daily</code> pays a +10% bonus while married.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Music (Last.fm) -->
+    <section class="test-category">
+      <h2>Music (Last.fm)</h2>
+      <article class="test-card">
+        <h3>/fm set &amp; /fm np</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/fm set username:yourLastfm</code>, play something, then <code>/fm np</code> (or <code>.fm</code>).</p>
+          <p><span class="test-label expected">Expected</span> Shows now-playing with current + previous track and scrobble counts.</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/fm top &amp; /fm whoknows</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/fm top type:artists</code>; with a couple members linked, <code>/fm whoknows artist:...</code></p>
+          <p><span class="test-label expected">Expected</span> Top list for the period; whoknows ranks linked server members by plays for that artist.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Fun extras -->
+    <section class="test-category">
+      <h2>Fun &amp; Utility Extras</h2>
+      <article class="test-card">
+        <h3>/define &amp; /gif</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/define word:serendipity</code>; <code>/gif search:cat</code> then hit 🔀 Another.</p>
+          <p><span class="test-label expected">Expected</span> A definition embed; a GIF that reshuffles on the button. (Both also work as <code>.define</code> / prefix.)</p>
+        </div>
+      </article>
+      <article class="test-card">
+        <h3>/help</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/help</code></p>
+          <p><span class="test-label expected">Expected</span> An embed listing every command grouped by category.</p>
+        </div>
+      </article>
+    </section>
+
   </main>
 
   <button type="button" class="to-top" aria-label="Back to top">
