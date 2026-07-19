@@ -28,9 +28,10 @@
 
     <section class="hero">
       <div class="container">
-        <h1>Jugaad</h1>
-        <p class="tagline">A Discord bot for economy, gambling, and community, without taking itself seriously.</p>
-        <div class="hero-actions">
+        <span class="hero-badge" data-reveal><span class="dot"></span> Alpha — testers wanted</span>
+        <h1 data-reveal data-reveal-delay="60">Jugaad</h1>
+        <p class="tagline" data-reveal data-reveal-delay="120">A Discord bot for economy, gambling, and community, without taking itself seriously.</p>
+        <div class="hero-actions" data-reveal data-reveal-delay="180">
           <a href="https://discord.com/oauth2/authorize?client_id=1526129273075929159&permissions=2147601472&integration_type=0&scope=bot+applications.commands" class="btn btn-primary">Add to Discord</a>
           <a href="commands.html" class="btn btn-secondary">View Commands</a>
         </div>
@@ -47,32 +48,32 @@
       <div class="container">
         <h2>What it does</h2>
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card" data-reveal>
             <span class="icon">💰</span>
             <h3>Economy &amp; Jobs</h3>
             <p>Earn Rokda through daily rewards, weekly claims, and a job system with payouts that scale as you go.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-reveal data-reveal-delay="70">
             <span class="icon">🎲</span>
             <h3>Gambling Games</h3>
             <p>Blackjack, coinflips, slots, dice, and more — all for fun, all virtual, none of it real money.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-reveal data-reveal-delay="140">
             <span class="icon">💬</span>
             <h3>Fun &amp; Social Commands</h3>
             <p>Truth or dare, roasts, compliments, ship compatibility, and other ways to keep a server lively.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-reveal>
             <span class="icon">🖼️</span>
             <h3>Image &amp; Meme Tools</h3>
             <p>Turn avatars into wanted posters, deep-fried memes, ASCII art, and other shareable nonsense.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-reveal data-reveal-delay="70">
             <span class="icon">🛡️</span>
             <h3>Moderation Suite</h3>
             <p>Locking, warnings, timeouts, and the other basics a server needs to stay in order.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-reveal data-reveal-delay="140">
             <span class="icon">📈</span>
             <h3>Community &amp; Engagement Tools</h3>
             <p>Leveling, polls, giveaways, reaction roles, and other ways to keep members coming back.</p>
@@ -85,9 +86,9 @@
       <div class="container">
         <h2>How to add it</h2>
         <ol class="steps">
-          <li>Click <strong>Add to Discord</strong> above.</li>
-          <li>Pick a server you manage.</li>
-          <li>Run <code>/balance</code> to confirm it's live.</li>
+          <li data-reveal>Click <strong>Add to Discord</strong> above.</li>
+          <li data-reveal data-reveal-delay="70">Pick a server you manage.</li>
+          <li data-reveal data-reveal-delay="140">Run <code>/balance</code> to confirm it's live.</li>
         </ol>
       </div>
     </section>
@@ -101,5 +102,12 @@
     </div>
   </footer>
 
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
