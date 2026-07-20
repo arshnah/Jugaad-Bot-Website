@@ -1,8 +1,8 @@
-# Jugaad Docs
+# After Hours Docs
 
-**Live: https://jugaadbot.vercel.app**
+**Live: https://afterhours.arshnah.in**
 
-Public landing page, command reference, and alpha tester checklist for Jugaad, a Discord bot. Plain HTML/CSS/JS, no build step, no framework, no dependencies. Pages: `index.html` (landing), `commands.html` (full command catalog), `testers.html` (alpha test checklist), `leaderboard.html` (live top players), shared `styles.css` and `script.js`.
+Public landing page, command reference, and alpha tester checklist for After Hours, a Discord bot. Plain HTML/CSS/JS, no build step, no framework, no dependencies. Pages: `index.html` (landing), `commands.html` (full command catalog), `testers.html` (alpha test checklist), `leaderboard.html` (live top players), shared `styles.css` and `script.js`.
 
 **Live data.** `index.html` and `leaderboard.html` both carry a
 `<meta name="jugaad-api">` tag pointing at `https://jugaadapi.arshnah.in` (the
