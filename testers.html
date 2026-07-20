@@ -671,6 +671,22 @@
       <h2>Community &amp; Engagement</h2>
 
       <article class="test-card">
+        <h3>/mc</h3>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> <code>/mc status</code>, then <code>/mc whitelist name:YourMcName</code>, then <code>/mc me</code>.</p>
+          <p><span class="test-label expected">Expected</span> Status lists who's online (or says the server is offline, without erroring). Whitelisting confirms and you can then join. <code>me</code> shows the name you claimed.</p>
+        </div>
+        <div class="test-step">
+          <p><span class="test-label edge">Edge case</span> Try <code>/mc whitelist name:bad name!</code>, then claim a second name, then have someone else claim the name you already took.</p>
+          <p><span class="test-label expected">Expected</span> An invalid username is refused before anything is sent to the server. You can only claim one name, and a name already claimed by someone else is refused.</p>
+        </div>
+        <div class="test-step">
+          <p><span class="test-label action">Action</span> In the bridge channel, send a message that mentions someone, and one with an image.</p>
+          <p><span class="test-label expected">Expected</span> In game it reads <code>[Discord] Name: @TheirUsername</code>, <strong>not</strong> a raw <code>&lt;@123456…&gt;</code> id. Images appear as an <code>[attachment]</code> link. Game chat, joins, leaves, deaths and server up/down come back to Discord.</p>
+        </div>
+      </article>
+
+      <article class="test-card">
         <h3>/counting</h3>
         <div class="test-step">
           <p><span class="test-label action">Action</span> <code>/counting set channel:#counting</code>, then in that channel post <code>1</code>, have someone else post <code>2</code>, then <code>3</code>.</p>
