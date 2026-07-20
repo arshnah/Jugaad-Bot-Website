@@ -38,9 +38,9 @@
 
     const total = allCards.length;
 
-    // Deliberately "entries", not "commands". There are 85 actual slash
+    // Deliberately "entries", not "commands". There are 84 actual slash
     // commands but ~106 cards, because subcommands (/fun, /owo, /grind, /image)
-    // get their own card. Saying "commands" here would contradict the 85 on the
+    // get their own card. Saying "commands" here would contradict the 84 on the
     // landing page.
     function setCount(shown, query) {
       if (!query) {
